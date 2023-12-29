@@ -1,5 +1,5 @@
 export default {
-  OPENAI_API_KEY: "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",
+  OPENAI_API_KEY: "",
   reverseProxyUrl: "https://ai.devtool.tech/proxy/v1/chat/completions",
   // 在群组中设置唤醒微信机器人的关键词
   groupKey: "",
