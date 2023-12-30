@@ -1,29 +1,18 @@
 {
   "compilerOptions": {
-    "types": ["node"],
-    "lib": ["ES2020"],
-    "target": "ES2020" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
-    "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
-    "outDir": "./types" /* Redirect output structure to the directory. */,
-
-    /* Strict Type-Checking Options */
-    "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
-    "noImplicitThis": false,
-    /* Module Resolution Options */
-    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
-    // "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation
-
-    /* Advanced Options */,
-    "skipLibCheck": true /* Skip type checking of declaration files. */,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+    "target": "ESNext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "esnext",                                /* Specify what module code is generated. */
+    "rootDir": "src",                                  /* Specify the root folder within your source files. */
+    "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+    "resolveJsonModule": true,                        /* Enable importing .json files */
+    "outDir": "dist",                                   /* Specify an output folder for all emitted files. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noImplicitAny": false,                            /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+    "noImplicitThis": false,                           /* Enable error reporting when `this` is given the type `any`. */
+    "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["src", "src/config.tsg.tssrc/config.tsonfig.ts"],
-  "exclude": ["node_modules", "lib", "**/*.js"]
+    "emitDeclarationOnly": false
+  }
 }
