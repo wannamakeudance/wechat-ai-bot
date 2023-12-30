@@ -1,16 +1,9 @@
-import { WechatyBuilder } from "wechaty";
 import { onLogin, onLogout, onMessage, onScan } from "./actions/index.js";
+import { bot } from "./bot.js";
 
 async function initProject() {
   try {
-    const bot = WechatyBuilder.build({
-      name: "WechatEveryDay",
-      puppet: "wechaty-puppet-wechat", // 如果有token，记得更换对应的puppet
-      puppetOptions: {
-        uos: true,
-      },
-    });
-
+    bot.startTime = new Date();
     bot
       .on("scan", onScan)
       .on("login", onLogin)

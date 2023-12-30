@@ -1,14 +1,19 @@
 import config from "../config.js";
 import ChatGPT from "../chatgpt.js";
+import { bot } from "../bot.js";
 
 export async function onMessage(msg) {
+  if (msg.date() < bot.startTime) {
+    return;
+  }
+
   const chatGPTClient = new ChatGPT();
   const contact = msg.talker();
   const receiver = msg.to();
   const content = msg.text().trim();
   const room = msg.room();
   const alias = (await contact.alias()) || (await contact.name());
-  const isText = msg.type() === String;
+  const isText = msg.type() === bot.Message.Type.Text;
 
   if (msg.self()) {
     return;
