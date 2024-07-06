@@ -55,4 +55,4 @@
 6. After successfully logging in, send a message to the logged-in WeChat from another WeChat account, and you will receive a reply from ChatGPT.
    ![alt text](src/assets/pic1.jpg)
 
-   ![alt text](src/assets/pic2.jpg)
+   <img src="src/assets/pic2.jpg" width="400px"/>
