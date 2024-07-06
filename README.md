@@ -1,7 +1,7 @@
 ## DEMO
 
 AI integrated into WeChat would respond automatically
-<img src="src/assets/pic2.jpg" width="400px"/>
+<img src="src/assets/pic2.jpg" width="500px"/>
 
 ## CONFIG
 
