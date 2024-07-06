@@ -1,4 +1,9 @@
-## Default Configuration
+## DEMO
+
+AI integrated into WeChat would respond automatically
+<img src="src/assets/pic2.jpg" width="400px"/>
+
+## CONFIG
 
 ```javascript
 {
@@ -19,7 +24,7 @@
 }
 ```
 
-## Setting Up the Bot 🤖
+## SETUP LOCALLY
 
 1. First, follow the steps below to obtain your ChatGPT OPENAI_API_KEY.
 
@@ -54,5 +59,3 @@
 
 6. After successfully logging in, send a message to the logged-in WeChat from another WeChat account, and you will receive a reply from ChatGPT.
    ![alt text](src/assets/pic1.jpg)
-
-   <img src="src/assets/pic2.jpg" width="400px"/>
