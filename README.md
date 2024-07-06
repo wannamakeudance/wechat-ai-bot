@@ -1,79 +1,78 @@
-## 默认配置
+## Default Configuration
 
 ```javascript
 {
-  // 填入你的OPENAI_API_KEY
+  // Enter your OPENAI_API_KEY
   OPENAI_API_KEY: "",
-  // 反向代理地址，简单说就是你的在国外服务器地址，如何获取看README
+  // Reverse proxy URL, simply put, your server address located abroad. See README for more details.
   reverseProxyUrl: "",
-  // 在群组中设置唤醒微信机器人的关键词
+  // Keyword to activate the WeChat bot in group chats
   groupKey: "",
-  // 在私聊中设置唤醒微信机器人的关键词
+  // Keyword to activate the WeChat bot in private chats
   privateKey: "",
-  // 重置上下文的关键词，如可设置为reset
+  // Keyword to reset the context, such as "reset"
   resetKey: "reset",
-  // 是否在群聊中带上提问的问题
+  // Whether to include the question in group chat replies
   groupReplyMode: true,
-  // 是否在私聊中带上提问的问题
+  // Whether to include the question in private chat replies
   privateReplyMode: false,
 }
 ```
 
-## 开始设置机器人 🤖
+## Setting Up the Bot 🤖
 
-1. 首先，需要按照以下步骤获你的 ChatGPT 的 OPENAI_API_KEY.
+1. First, follow the steps below to obtain your ChatGPT OPENAI_API_KEY.
 
-> 获取你的 OPENAI_API_KEY:
+> How to get your OPENAI_API_KEY:
 >
-> - 打开 [https://platform.openai.com/overview](https://platform.openai.com/overview) 并登录注册，进入网页。
+> - Go to [https://platform.openai.com/overview](https://platform.openai.com/overview) and log in or sign up.
 
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/2777249/1675413138418-d5df2543-bd37-41cc-a16c-505c5a38e88d.png)
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/2777249/1675413190188-4cf10947-ea7f-479d-9550-0dec9d40c0e2.png?x-oss-process=image%2Fresize%2Cw_1500%2Climit_0)
 
-2. 把 OPENAI_API_KEY 填入目录`src/config.ts`下的 `OPENAI_API_KEY` 中
+2. Enter the OPENAI_API_KEY in the `OPENAI_API_KEY` field in `src/config.ts`.
 
-3. 把 reverseProxyUrl 填入目录`src/config.ts`下的 `reverseProxyUrl` 中，如何设置可看下面介绍。
+3. Enter the reverseProxyUrl in the `reverseProxyUrl` field in `src/config.ts`. For more details, see the instructions below.
 
-> 当然也可以选择白嫖山月老师的代理地址：`https://ai.devtool.tech/proxy/v1/chat/completions`，可以关注[他的项目](https://github.com/shfshanyue/wechat-chatgpt)
+> Alternatively, you can use the proxy address provided by Shanyue: `https://ai.devtool.tech/proxy/v1/chat/completions`. You can also follow [his project](https://github.com/shfshanyue/wechat-chatgpt).
 
-4. 然后在终端运行以下命令。如有需要，请在`src/config.ts`中配置其它配置变量。
+4. Run the following commands in your terminal. If needed, configure other variables in `src/config.ts`.
 
 ```javascript
-  // 安装依赖
+  // Install dependencies
   npm i
   npm run dev
 
-  // 也可以使用pnpm
+  // Alternatively, using pnpm
   npm i -g pnpm
   pnpm i
   pnpm run dev
-
 ```
 
-3. 执行完之后，可以看到终端控制台输出一下信息，扫码登录即可.
+5. After running the commands, you will see output in the terminal. Scan the QR code to log in.
    ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2777249/1670287138908-cc898c58-6e0a-488f-ae07-ae489508c1be.png#averageHue=%23484948&clientId=uf4023d0a-0da7-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=442&id=ub5fee6b7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1200&originWidth=1660&originalType=binary&ratio=1&rotation=0&showTitle=false&size=492370&status=done&style=none&taskId=u233d9139-1ef5-42bf-9f44-354c6565862&title=&width=612)
 
-4. 登录成功，用另外一个微信往你扫码登录的微信发消息，你将会收到来自 ChatGPT 的回复。
-   ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2777249/1670288278607-73beed83-1a42-42db-8404-72ba60bf2c53.png#averageHue=%234d4e4d&clientId=uf4023d0a-0da7-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=437&id=uff52651b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=874&originWidth=1398&originalType=binary&ratio=1&rotation=0&showTitle=false&size=543479&status=done&style=none&taskId=ub5559ec7-30f8-4c07-a9f8-1445a659835&title=&width=699)![image.png](https://cdn.nlark.com/yuque/0/2023/png/2777249/1680258120110-20343826-d2dc-4fd5-9f94-1a40e43940bb.png?x-oss-process=image%2Fresize%2Cw_1270%2Climit_0)
+6. After successfully logging in, send a message to the logged-in WeChat from another WeChat account, and you will receive a reply from ChatGPT.
+   ![image.png](https://cdn.nlark.com/yuque/0/2022/png/2777249/1670288278607-73beed83-1a42-42db-8404-72ba60bf2c53.png#averageHue=%234d4e4d&clientId=uf4023d0a-0da7-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=437&id=uff52651b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=874&originWidth=1398&originalType=binary&ratio=1&rotation=0&showTitle=false&size=543479&status=done&style=none&taskId=ub5559ec7-30f8-4c07-a9f8-1445a659835&title=&width=699)![image.png](https://cdn.nlark.com/yuque/0/2023/png/...
 
-## 设置反向代理地址
+## Setting Up the Reverse Proxy URL
 
-ChatGPT API 代理<https://hub.docker.com/r/mirrors2/chatgpt-api-proxy>
+To set up a ChatGPT API proxy, refer to [ChatGPT API Proxy on Docker Hub](https://hub.docker.com/r/mirrors2/chatgpt-api-proxy).
 
-chatgpt api 代理,已验证 OpenCat,AssisChat,AMA(问天),chathub
+This ChatGPT API proxy has been verified with OpenCat, AssisChat, AMA (Ask Me Anything), and ChatHub.
 
-可配置好 OPENAI_API_KEY 分享代理地址给他人用.
+You can configure your OPENAI_API_KEY and share the proxy URL with others.
 
-快速开始
+Quick Start:
 
 ```bash
 docker run -d -p 80:80 --name chatgpt-api-proxy mirrors2/chatgpt-api-proxy
 
-# 可选 -e OPENAI_API_KEY={nide_api_key}
+# Optional: -e OPENAI_API_KEY={your_api_key}
 ```
 
-docker 跑起来之后你的代理地址就生效了：
+Once the Docker container is running, your proxy URL will be active:
 
-官方的：`https://api.openai.com/v1/chat/completions`
+Official: `https://api.openai.com/v1/chat/completions`
 
-你的： `你的域名/v1/chat/completions` 或者 `你的服务器ip和端口/v1/chat/completions`
+Yours: `your-domain/v1/chat/completions` or `your-server-ip-and-port/v1/chat/completions`
